@@ -1,0 +1,70 @@
+{
+	"info": {
+		"_postman_id": "d4169982-b5de-41f8-8fe6-bae2a2f50012",
+		"name": "filter_spotify_playlists",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get artists of a playlist",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "yes",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/playlist_artists/3IgBgYnnyjRRj26VuFqgaI",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"playlist_artists",
+						"3IgBgYnnyjRRj26VuFqgaI"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a copy of the playlist filtered with the artists sent",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "yes",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"artists\": {\n        \"Viva Suecia\": \"57s0ep3eNSg81D7ZxiuHbC\",\n        \"Rufus T. Firefly\": \"51Hx65ymA6pNWu8cTTXET1\",\n        \"Second\": \"3Ju3bW8OaeUmfQKqMtATKr\",\n        \"Arde Bogotá\": \"2Wwiu1wnq1W8AMYbWuRFDH\",\n        \"Karavana\": \"6SShgjYwZQZ8Nx2wo5IKdd\",\n        \"Loquillo\": \"5Fv0DQ1ZBuc2DlidtOUCZr\",\n        \"Loquillo Y Los Trogloditas\": \"4EM1gc21UrYHQ3eal963Xl\",\n        \"Shinova\": \"6rRTrEHzGSDqhmFJQrNFMO\",\n        \"Amatria\": \"5aINmhPWfAHvZ5qaMdBezq\",\n        \"Apartamentos Acapulco\": \"5MJEbh71qd0GTKQdKko3TT\",\n        \"Menta\": \"6LlGOJmoJ97bhGx3UX2URn\",\n        \"Veintiuno\": \"2k60o7SVpOKmzpuTEAG3L8\",\n        \"Angel Stanich\": \"1S3qoq3uXtDOYVrohpcsKY\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/create_copy_playlist/3IgBgYnnyjRRj26VuFqgaI",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"create_copy_playlist",
+						"3IgBgYnnyjRRj26VuFqgaI"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
