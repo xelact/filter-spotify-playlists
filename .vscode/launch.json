@@ -1,0 +1,23 @@
+{
+    // Use IntelliSense para saber los atributos posibles.
+    // Mantenga el puntero para ver las descripciones de los existentes atributos.
+    // Para más información, visite: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: run API",
+            "type": "python",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/filter_spotify_playlists",
+            "module": "uvicorn",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "python": "/Users/alex/Library/Caches/pypoetry/virtualenvs/filter-spotify-playlists-LssEscBw-py3.11/bin/python",
+            "envFile": "${workspaceFolder}/filter_spotify_playlists/.env",
+            "args": [
+                "main:app",
+                "--reload",
+            ]
+        }
+    ]
+}
